@@ -1,17 +1,16 @@
 import java.util.Scanner;
-public class ReverseNumberExample1   
-{  
-public static void main(String[] args)   
-{  
-    Scanner sc=new Scanner(System.in);
-int number = sc.nextInt();
-int reverse = 0;  
-while(number != 0)   
-{  
-int remainder = number % 10;  
-reverse = reverse * 10 + remainder;  
-number = number/10;  
-}  
-System.out.println(reverse);  
-}  
-}  
+public class sample{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int s=0,k;
+        while(n!=0)
+        {
+            k=n%10;
+            s=k+s*10;
+            n=n/10;
+        }
+        System.out.print(s);
+    }
+}
