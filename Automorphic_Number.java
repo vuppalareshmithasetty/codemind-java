@@ -1,22 +1,11 @@
-import java.util.Scanner;  
-public class AutomorphicNumberExample2  
-{  
-public static void main(String args[])  
-{  
-Scanner in = new Scanner(System.in);  
-int num = in.nextInt();  
-int count=0;  
-int square = num*num;  
-int temp = num;    
-while(temp>0)  
-{  
-count++;  
-temp=temp/10;  
-}   
-int lastDigit = (int) (square%(Math.pow(10, count)));   
-if(num == lastDigit)  
-System.out.println("Automorphic Number");  
-else  
-System.out.println("Not an Automorphic Number");  
-}  
-}  
+import java.util.*;
+public class Sample{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int n =sc.nextInt();
+        int s = n*n;
+        String s1 = Integer.toString(n);
+        String s2 = Integer.toString(s);
+        System.out.println(s2.endsWith(s1)?"Automorphic Number":"Not an Automorphic Number");
+    }
+}
